@@ -7,40 +7,36 @@
     <link rel="stylesheet" href="src/styles.css">
 </head>
 <body>
-    <div class="saintart">
-        <items>
-
+    <div class="card">
+        <header class="saintart">
             <h1>SAINT</h1>
             <p>
-                SAINT is a collection of art, events and triumphs from all around the world.
-Browse the library of all of them and find your favorite. Stay tuned for future updates.
+                SAINT is a collection of art, events, and triumphs from all around the world. Browse the library of all of them and find your favorite. Stay tuned for future updates.
             </p>
+        </header>
 
-            <div class="signup">
-                <h2>Sing up to our Newsleter</h2>
-                <button>Email...</button>
-                <submi>Submit</submi>
-            </div>
+        <section class="signup">
+            <h2>Sign up for our Newsletter</h2>
+            <form action="#" method="post">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
 
-            <div class="Follow">
-                <h2>Follow us on:</h2>
-                <div class="socialicons">
-                    <li>
-                        <ul>
-                            <a>TikTok</a>
-                            <a>X</a>
-                            <a>Instagram</a>
-                            <a>Discord</a>
-                        </ul>
-                    </li>
-                </div>
-            </div>
+        <section class="follow">
+            <h2>Follow us on:</h2>
+            <ul class="socialicons">
+                <li><a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer">TikTok</a></li>
+                <li><a href="https://x.com" target="_blank" rel="noopener noreferrer">X</a></li>
+                <li><a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                <li><a href="https://discord.com" target="_blank" rel="noopener noreferrer">Discord</a></li>
+            </ul>
+        </section>
 
-        </items>
-    </div>
-
-    <div class="saintfooter">
-        <p>saint.art All Rights Reserved</p>
+        <footer class="saintfooter">
+            <p>© 2024 saint.art. All Rights Reserved.</p>
+        </footer>
     </div>
 </body>
 </html>
