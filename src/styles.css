@@ -6,6 +6,7 @@ body {
     padding: 0;
     font-family: Arial, sans-serif;
     color: #ffffff;
+    background-color: black;
     background: url('/src/images/Prop Actual Size.png') no-repeat center center fixed;
     background-size: cover;
     display: flex;
@@ -25,22 +26,70 @@ body {
     border-radius: 12px;
     border: 0.5px solid #6E6E6E;
     -webkit-box-shadow: -1px -10px 34px 8px rgba(0,0,0,0.75);
--moz-box-shadow: -1px -10px 34px 8px rgba(0,0,0,0.75);
-box-shadow: -1px -10px 34px 8px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px -10px 34px 8px rgba(0,0,0,0.75);
+    box-shadow: -1px -10px 34px 8px rgba(0,0,0,0.75);
     max-width: 1100px;
     width: 100%;
     box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-content {
+    width: 50%;
+}
+
+/* Add these styles */
+
+.right-content {
+    width: 50%;
+    position: relative; /* Needed for the pseudo-elements */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.right-content::before, .right-content::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 20px; /* Adjust the height as needed */
+    z-index: 1;
+}
+
+.right-content::before {
+    top: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+}
+
+.right-content::after {
+    bottom: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+}
+
+.right-content spline-viewer {
+    position: relative;
+    z-index: 0; /* Ensure the Spline viewer is below the shadow */
 }
 
 header.saintart {
     text-align: left;
 }
 
-h1, h2 {
+h1 {
+    font-size: 40px;
+    margin: 0 0 1em 0;
+}
+
+
+
+h2 {
     margin: 0 0 1em 0;
 }
 
 p {
+    font-size: 14px;
     margin: 0 0 1em 0;
 }
 
@@ -116,5 +165,30 @@ footer.saintfooter {
 @media (max-width: 768px) {
     .card {
         padding: 1em;
+        flex-direction: column;
+    }
+
+    .left-content, .right-content {
+        width: 100%;
+    }
+
+    .right-content {
+        margin-top: 1em;
+        justify-content: center;
+    }
+}
+
+/* Disable Spline Viewer on Smaller Screens */
+@media (max-width: 768px) {
+    .card {
+        flex-direction: column;
+    }
+
+    .left-content, .right-content {
+        width: 100%;
+    }
+
+    .right-content {
+        display: none; /* Hide Spline Viewer on small screens */
     }
 }
