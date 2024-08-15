@@ -141,15 +141,30 @@ section.signup input[type="email"] {
 
 ul.socialicons {
     list-style-type: none;
-    padding: 0;
+    padding: 2px;
     margin: 0;
     display: flex;
-    justify-content: center;
-    gap: 1em;
+    justify-content: left;
+    gap: 2em;
 }
 
 ul.socialicons li {
     display: inline;
+}
+
+.socialicons {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+}
+.socialicons li {
+    display: inline;
+}
+.socialicons img {
+    width: 28px; /* Adjust size as needed */
+    height: 28px;
+    vertical-align: middle;
 }
 
 footer.saintfooter {
