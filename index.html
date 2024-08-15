@@ -7,6 +7,12 @@
     <link rel="stylesheet" href="src/styles.css">
 </head>
 <body>
+
+    <div id="loading">
+        <div class="loader"></div>
+    </div>
+
+
     <div class="card">
         <div class="left-content">
             <header class="saintart">
@@ -41,9 +47,26 @@
         </div>
 
         <div class="right-content">
-            <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.6/build/spline-viewer.js"></script>
-<spline-viewer loading-anim-type="spinner-small-dark" url="https://prod.spline.design/3kFZd1tzr3LsoAuS/scene.splinecode"></spline-viewer>
+            <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.12/build/spline-viewer.js"></script>
+            <spline-viewer loading-anim-type="spinner-big-dark" url="https://prod.spline.design/3kFZd1tzr3LsoAuS/scene.splinecode"></spline-viewer>
         </div>
     </div>
+
+    <script>
+        // Function to hide the loading overlay and show content
+        function showContent() {
+            document.getElementById('loading').style.display = 'none';
+            document.getElementById('content').style.display = 'block';
+        }
+
+        // Hide loading overlay and show content when window is fully loaded
+        window.onload = showContent;
+
+         // Ensure the loading overlay is shown for at least 1 seconds
+         window.onload = function() {
+            // Show the content after 1 seconds, regardless of when the page finishes loading
+            setTimeout(showContent, 1000);
+        };
+    </script>
 </body>
 </html>

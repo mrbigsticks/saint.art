@@ -192,3 +192,37 @@ footer.saintfooter {
         display: none; /* Hide Spline Viewer on small screens */
     }
 }
+
+
+
+
+
+/* Loading overlay styles */
+#loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Ensure it's on top */
+}
+.loader {
+    border: 16px solid #ffffff; 
+    border-top: 16px solid #000000;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+/* Content styles */
+#content {
+    display: none;
+}
